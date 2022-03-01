@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Week2Task</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication1.Commons.BaseResult">
+            <summary>
+            响应基类 int code + string msg
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Commons.BaseResult`1">
+            <summary>
+            响应基类 + 泛型对象
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:WebApplication1.Controllers.UserController">
+            <summary>
+            UserAPI
+            </summary>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.Register(WebApplication1.Models.RegisterUser,IFreeSql,WebApplication1.Services.Impl.UserService)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <param name="userService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.Login(WebApplication1.Models.LoginUser,IFreeSql,WebApplication1.Services.Impl.UserService)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <param name="userService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.Logout(System.Int32)">
+            <summary>
+            注销-用户退出登录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.Delete(System.Int32,IFreeSql,WebApplication1.Services.Impl.UserService)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.Update(WebApplication1.Models.UpdateUser,IFreeSql,WebApplication1.Services.Impl.UserService)">
+            <summary>
+            更新用户信息
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <param name="userService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.ListSelect(System.Int32,System.Int32,IFreeSql,WebApplication1.Services.Impl.UserService,System.String,System.String)">
+            <summary>
+            用户列表分页模糊查询
+            </summary>
+            <param name="pageNum">一页多少</param>
+            <param name="pageNo">第几页</param>
+            <param name="fsql"></param>
+            <param name="userService"></param>
+            <param name="un"></param>
+            <param name="nn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.UserController.GetUserById(System.Int32,IFreeSql,WebApplication1.Services.Impl.UserService)">
+            <summary>
+            id查询用户
+            </summary>
+            <param name="id"></param>
+            <param name="fsql"></param>
+            <param name="userService"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplication1.Models.User">
+            <summary>
+            User基类
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Models.TableUser">
+            <summary>
+            user表实体类
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Models.RegisterUser">
+            <summary>
+            注册Bean
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Models.LoginUser">
+            <summary>
+            登录Bean
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Models.UpdateUser">
+            <summary>
+            User更新Info
+            </summary>
+        </member>
+        <member name="M:WebApplication1.Services.Impl.UserService.Delete(System.Int32,IFreeSql)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.Impl.UserService.ListSelect(System.Int32,System.Int32,System.String,System.String,IFreeSql)">
+            <summary>
+            用户列表分页模糊查询
+            </summary>
+            <param name="pageNum"></param>
+            <param name="pageNo"></param>
+            <param name="un"></param>
+            <param name="nn"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.Impl.UserService.Login(WebApplication1.Models.LoginUser,IFreeSql,System.String)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.Impl.UserService.Register(WebApplication1.Models.RegisterUser,IFreeSql)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.Impl.UserService.Update(WebApplication1.Models.UpdateUser,IFreeSql)">
+            <summary>
+            更新用户数据
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.IUserService.Register(WebApplication1.Models.RegisterUser,IFreeSql)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.IUserService.Login(WebApplication1.Models.LoginUser,IFreeSql,System.String)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.IUserService.Delete(System.Int32,IFreeSql)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.IUserService.Update(WebApplication1.Models.UpdateUser,IFreeSql)">
+            <summary>
+            更新用户数据
+            </summary>
+            <param name="user"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.IUserService.ListSelect(System.Int32,System.Int32,System.String,System.String,IFreeSql)">
+            <summary>
+            用户列表分页模糊查询
+            </summary>
+            <param name="pageNum"></param>
+            <param name="pageNo"></param>
+            <param name="un"></param>
+            <param name="nn"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Services.IUserService.GetUserById(System.Int32,IFreeSql)">
+            <summary>
+            id查询用户
+            </summary>
+            <param name="id"></param>
+            <param name="fsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Week2Task.Filter.BaseActionFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            进入action之前
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Week2Task.Filter.BaseResultFilter">
+            <summary>
+            暂时不用.
+            </summary>
+        </member>
+    </members>
+</doc>
